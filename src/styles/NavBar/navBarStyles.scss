@@ -1,0 +1,203 @@
+@import "../commonStyles.scss";
+@import "../Variable.scss";
+
+.containerPadding {
+  padding: 20px 0px 20px 0px;
+  // background-color: #e2eef8;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+}
+
+.list-inline-item:hover {
+  color: #ef5a60;
+  transition: 0.2s ease-in-out;
+}
+
+.containerPadding_inner {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_itemList {
+  margin: 0 !important;
+}
+
+.nav_itemList > li {
+  margin-right: 30px !important;
+  color: #082942;
+  font-weight: 450;
+  cursor: pointer;
+}
+
+.nav_itemList .list-inline-item {
+  position: relative;
+  cursor: pointer;
+  padding: 8px 0;
+  font-weight: 500;
+  font-size: 16px;
+  color: #333;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav_itemList .list-inline-item::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #ef5a60;
+  transition: width 0.4s ease;
+  border-radius: 1px;
+}
+
+.nav_itemList .list-inline-item:hover {
+  color: #ef5a60;
+  transform: scale(1.05);
+}
+
+.nav_itemList .list-inline-item:hover::after,
+.nav_itemList .list-inline-item.active::after {
+  width: 60%;
+}
+
+.nav_itemList .list-inline-item.active {
+  color: #ef5a60;
+  font-weight: 500;
+}
+
+.start_Listing_button {
+  //background-color: #ef5a60;
+  //color: white;
+  padding: 20px 10px 20px 10px;
+  //margin-left: 51px;
+  border-radius: 8px;
+  font-size: 16px;
+  // border: 1px solid #b14549 !important;
+  border: none;
+  font-weight: 400;
+
+  &:hover {
+    background-color: #fd6a72; // Darker shade for hover
+  }
+}
+
+.login-for {
+  background-color: #ef5a60;
+  color: white;
+}
+
+/*  responsive part */
+
+.desktop-nav {
+  display: flex;
+}
+
+.menu-toggle-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Initially hidden */
+  height: 100%;
+  width: 300px;
+  //background-color: #082942;
+
+  background: linear-gradient(122.01deg, #082942 47.53%, #1468a8 97.52%);
+  color: white;
+  padding: 46px 30px;
+  transition: left 0.4s ease-in-out;
+  z-index: 100;
+}
+
+.sidebar.open {
+  left: 0; /* Slide into view */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  color: #ef5a60;
+}
+
+.sidebar ul li.active {
+  color: #ef5a60;
+  font-weight: 400;
+}
+
+.user-icon-area {
+  width: 48px;
+  height: 48px;
+  border-radius: 60%;
+  //margin: 0px 0px 0px 12px;
+  //margin: 0px 10px 0px 8px;
+  // margin: 0px 3px 0px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ef5a60;
+  &:hover {
+    background-color: #fd6a72; // Darker shade for hover
+  }
+}
+
+.cursor-setUp {
+  cursor: pointer;
+}
+
+.listNing-button {
+}
+
+@media (max-width: $responsive-tablet) {
+  .containerPadding {
+    padding: 20px 24px 20px 24px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .desktop-nav-bar {
+    display: none !important;
+  }
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .menu-toggle-btn {
+    display: block;
+  }
+
+  .login-extra {
+    margin: 0 !important;
+  }
+
+  .user-icon-area {
+    margin: 0px 0px 0px 0px !important;
+  }
+}
+
+@media (min-width: $largeScreen-breakpoint) {
+  .containerPadding_inner {
+    width: $forLargeScreen-inner-container;
+  }
+}

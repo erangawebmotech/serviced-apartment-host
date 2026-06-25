@@ -1,0 +1,52 @@
+@import "../commonStyles.scss";
+@import "../Variable.scss";
+
+.f-view {
+  padding: 90px 0px 80px 0px;
+  min-height: 100vh;
+  width: 100%;
+}
+.innerF-view {
+  width: 90%;
+}
+
+.propertyViewPageContainer {
+  .css-dev-only-do-not-override-c8kyaf.ant-image {
+    width: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important  ;
+  }
+}
+
+@media (min-width: $largeScreen-breakpoint) {
+  .innerF-view {
+    width: $forLargeScreen-inner-container;
+  }
+}
+
+.imageList{
+  display: block;
+}
+.responsiveImageList{
+  display: none !important;
+}
+
+@media (max-width: 991px) {
+  .imageList{
+    display: none !important;
+  }
+  .responsiveImageList{
+    display: flex !important;
+    
+  }
+}
+
+@media (max-width: 575px) {
+  .imageList{
+    display: none !important;
+  }
+  .responsiveImageList{
+    display: flex !important;
+    
+  }
+}

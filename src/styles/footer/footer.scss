@@ -1,0 +1,94 @@
+@import "../commonStyles.scss";
+@import "../Variable.scss";
+
+.footerMain {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  padding: 60px 0px 60px 0px;
+  background-color: $footer-bg;
+}
+.footer-inner {
+  width: 90%;
+  color: white;
+  flex-direction: column;
+  display: flex;
+  .up-section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+}
+.commonBtn {
+  padding: 8px 20px;
+  border-radius: 13px;
+  margin: 5px 7px;
+}
+.find-btn {
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+}
+
+.down-section {
+}
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: auto !important;
+}
+
+.footer-item > ul {
+  list-style: none;
+  padding: 0;
+}
+.first-li {
+  font-weight: 500 !important;
+}
+.footer-item > ul > li {
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 28px;
+}
+.logo_blur-container {
+  text-align: start;
+  position: relative;
+  right: 0px;
+}
+.all-right-reserved {
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 28px;
+}
+@media (max-width: $responsive-tablet) {
+  .footer-inner {
+    width: 100% !important;
+  }
+  .footer-inner .up-section {
+    padding-top: 8px !important;
+  }
+
+  .footer-item > ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+@media (max-width: 700px) {
+  .down-section-footer-last {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-down-section {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: $largeScreen-breakpoint) {
+  .footer-inner {
+    width: $forLargeScreen-inner-container;
+  }
+}

@@ -1,0 +1,5 @@
+export enum PlansEnum {
+  SUPPORTIVE = "SUPPORTIVE",
+  ALL_INCLUSIVE = "ALL_INCLUSIVE",
+  STARTER = "STARTER",
+}

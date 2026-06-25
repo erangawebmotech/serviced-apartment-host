@@ -1,0 +1,84 @@
+.colorAnimationContainer {
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: absolute;
+
+  .colorOne {
+    background-color: rgba(239, 90, 96, 0.6);
+    filter: blur(250px);
+    position: absolute;
+    top: -10rem;
+    left: -10rem;
+    height: 800px;
+    width: 800px;
+    object-fit: contain;
+    animation: moveLeftToRight 10s linear infinite alternate-reverse;
+  }
+
+  .colorTwo {
+    height: 800px;
+    width: 800px;
+    background-color: rgba(8, 41, 66, 0.6);
+    filter: blur(250px);
+    position: absolute;
+    bottom: -10rem;
+    right: -10rem;
+    object-fit: contain;
+    animation: moveRightToLeft 10s linear infinite alternate-reverse;
+  }
+}
+
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(70rem) translateY(-2rem);
+  }
+  25% {
+    transform: translateX(70rem) translateY(35rem);
+  }
+  50% {
+    transform: translateX(-10rem) translateY(-2rem);
+  }
+  100% {
+    transform: translateX(-10rem) translateY(35rem);
+  }
+}
+
+@keyframes moveRightToLeft {
+  0% {
+    transform: translateX(-70rem) translateY(2rem);
+  }
+  25% {
+    transform: translateX(-70rem) translateY(-35rem);
+  }
+  50% {
+    transform: translateX(10rem) translateY(2rem);
+  }
+  100% {
+    transform: translateX(10rem) translateY(-35rem);
+  }
+}
+
+@media (max-width: 992px) {
+  .colorAnimationContainer {
+    .colorOne {
+      width: 150%;
+    }
+
+    .colorTwo {
+      width: 150%;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .colorAnimationContainer {
+    .colorOne {
+      width: 200%;
+    }
+
+    .colorTwo {
+      width: 200%;
+    }
+  }
+}

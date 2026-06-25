@@ -1,0 +1,17 @@
+.css-dev-only-do-not-override-c8kyaf.ant-form-item
+  .ant-form-item-label
+  > label.ant-form-item-required:not(
+    .ant-form-item-required-mark-optional
+  )::before {
+  display: none !important;
+}
+
+.icalFormRepeaterBtns {
+  margin: 30px 0 0 0;
+}
+
+@media (max-width: 991px) {
+  .icalFormRepeaterBtns {
+    margin:0 0 0 0;
+  }
+}

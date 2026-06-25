@@ -1,0 +1,7 @@
+export enum ReservationSummeryFiltrationEnum {
+  CURRENTLY_HOSTING = "CURRENTLY_HOSTING",
+  CHECKING_OUT = "CHECKING_OUT",
+  UPCOMING = "UPCOMING",
+  STAYED = "STAYED",
+  CANCELLED = "CANCELLED",
+}

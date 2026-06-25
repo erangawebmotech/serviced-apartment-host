@@ -1,0 +1,24 @@
+.responsive-table .ant-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.responsive-table .ant-table-content {
+  min-width: 100%;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+  .responsive-table .ant-table-thead>tr>th,
+  .responsive-table .ant-table-tbody>tr>td {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .reservationCardImg {
+    height: 170px;
+  }
+}

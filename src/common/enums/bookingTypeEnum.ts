@@ -1,0 +1,4 @@
+export enum BookingTypeEnum {
+  ENTIRE_PROPERTY = "ENTIRE_PROPERTY",
+  INDIVIDUAL_UNIT = "INDIVIDUAL_UNIT",
+}

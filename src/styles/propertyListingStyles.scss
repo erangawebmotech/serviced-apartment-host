@@ -1,0 +1,259 @@
+.ant-checkbox .ant-checkbox-inner {
+  width: 20px !important;
+  height: 20px !important;
+  border: 2px solid #ef5a60 !important;
+  background-color: transparent !important;
+}
+
+.ant-checkbox .ant-checkbox-input {
+  height: 20px !important;
+  width: 20px !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #ef5a60 !important;
+}
+
+.ant-radio-wrapper .ant-radio-inner {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #ef5a60;
+}
+
+.ant-select-selector {
+  background-color: transparent !important;
+}
+
+.ant-input-number-outlined {
+  background: transparent !important;
+}
+
+.ant-picker-dropdown .ant-picker-footer {
+  display: none !important;
+}
+
+.ck-rounded-corners .ck.ck-editor__main>.ck-editor__editable,
+.ck.ck-editor__main>.ck-editor__editable.ck-rounded-corners {
+  background-color: transparent;
+  border-end-end-radius: 12px !important;
+  border-end-start-radius: 12px !important;
+  border: 1px solid #6c757d !important;
+  height: 200px;
+}
+
+.ck.ck-editor__top .ck-sticky-panel .ck-sticky-panel__content .ck-toolbar {
+  background-color: transparent;
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+  border: 1px solid #6c757d !important;
+}
+
+.ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-sticky-panel__content,
+.ck.ck-editor__top .ck-sticky-panel .ck-sticky-panel__content.ck-rounded-corners {
+  border: none;
+}
+
+.ck.ck-balloon-panel.ck-balloon-panel_visible {
+  display: none !important;
+}
+
+.ant-input-number-lg input.ant-input-number-input {
+  text-align: center !important;
+  color: black !important;
+}
+
+.ant-upload-list-item-container {
+  height: auto !important;
+}
+
+.ant-collapse .ant-collapse-item:last-child>.ant-collapse-content {
+  background-color: #fff5f5 !important;
+}
+
+.ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow svg {
+  color: #ef5a60;
+}
+
+// .ant-input-number-lg input.ant-input-number-input {
+//   text-align: start !important;
+//   color: black !important;
+// }
+
+.ant-input-group>.ant-input:first-child,
+.ant-input-group .ant-input-group-addon:first-child {
+  padding: 0 !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.ant-input-outlined:focus,
+.ant-input-outlined:focus-within {
+  box-shadow: none !important;
+}
+
+.ant-input-group-wrapper-outlined .ant-input-group-addon:last-child {
+  border: none !important;
+  font-size: 21px !important;
+  background-color: transparent !important;
+}
+
+
+.ant-progress .ant-progress-inner {
+  background-color: rgb(255 255 255) !important;
+  padding: 3px !important;
+}
+
+.ant-progress .ant-progress-bg.ant-progress-bg-inner .ant-progress-text-inner.ant-progress-text-bright {
+  color: rgb(255 255 255) !important;
+}
+
+//===============================================================================
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff8d91;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ef5a60;
+}
+
+// .ant-input-number-input {
+//   color: #ef5a60 !important;
+// }
+
+.ant-input-number-handler-wrap {
+  display: none !important;
+}
+
+.listingHeader {
+  padding: 0 30px
+}
+
+@media (max-width:490px) {
+  .listingHeader {
+    padding: 0 0px
+  }
+}
+
+.viewReservationPage {
+  .ant-collapse .ant-collapse-item:last-child>.ant-collapse-content {
+    background-color: #ffffff !important;
+  }
+}
+
+.content-center-input-parent {
+  .ant-input-number-lg input.ant-input-number-input {
+    text-align: start !important;
+  }
+}
+
+.PropertyDetailsFinishStepContainer {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.homeStayIconsDiv {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+
+  svg {
+    height: 50px;
+    width: auto;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  /* Adjust the gap between grid items */
+  padding: 10px;
+  /* Optional padding for the grid container */
+}
+
+.card-item {
+  width: 100%;
+  /* Ensures the card takes up the full width of the grid column */
+  height: auto;
+  /* Keeps the height flexible */
+}
+
+@media (max-width: 992px) {
+  .contentParent {
+    height: auto !important;
+
+    .contentRow {
+      height: auto !important;
+      width: 100%;
+    }
+
+    .btnRow {
+      height: auto !important;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .stepGetStartContainer {
+    .getStartBtn {
+      width: 100% !important;
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .contentParent {
+    padding: 0 40px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .mobile-view-res {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .mobile-view-uploader-res {
+    display: flex;
+    justify-content: center;
+  }
+
+  .subtopic-position {
+    width: 100%;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .subtopic-position {
+    width: 100%;
+    text-align: left;
+  }
+
+  .remove-border-md {
+    border-right: none !important;
+  }
+
+  .SRSummeryEndBorder {
+    border-right: 1px solid #dee2e6;
+  }
+
+  .SRSummeryStartBorder {
+    border-left: 1px solid #dee2e6;
+  }
+}

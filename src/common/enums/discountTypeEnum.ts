@@ -1,0 +1,6 @@
+export enum DiscountTypeEnum {
+  EARLY_BIRD = "EARLY_BIRD",
+  LAST_MINUTE = "LAST_MINUTE",
+  SEASONAL = "SEASONAL",
+  DURATIONAL = "DURATIONAL",
+}

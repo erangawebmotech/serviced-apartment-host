@@ -1,0 +1,10 @@
+export enum PropertyStatusEnum {
+  PUBLISHED = "PUBLISHED",
+  DRAFT = "DRAFT",
+  PENDING = "PENDING",
+  UNPUBLISHED = "UNPUBLISHED",
+  HOLD = "HOLD",
+  REJECTED = "REJECTED",
+}
+
+

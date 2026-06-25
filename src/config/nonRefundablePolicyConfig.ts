@@ -1,0 +1,1 @@
+export const nrpRateEnum: number = 10;

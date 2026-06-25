@@ -1,0 +1,156 @@
+$bgHomeImage: url("../../assets/images/awani.png");
+
+$bgHomeLogin: url("../../assets/images/pink.png");
+$bgImageLoginMobile: url("../../assets/images/blendImage.png");
+
+.main_login {
+  min-height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0px;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  //max-width: 900px;
+}
+
+.lft-img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.login-image {
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  //padding: 20px;
+}
+
+.login-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.login-form {
+  padding: 70px;
+  width: 100%;
+}
+
+.left-area {
+}
+
+.right-area {
+  width: 35%;
+  background-image: $bgHomeLogin;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    background-image: $bgImageLoginMobile;
+    background-size: cover;
+    background-position: bottom;
+  }
+
+  .login-image {
+    width: 100%;
+    display: none;
+    // padding: 30px;
+  }
+
+  .login-form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .right-area {
+    width: 100%;
+    padding: 30px;
+    background-image: $bgHomeLogin;
+  }
+}
+
+.form-check-label {
+  font-size: 0.9rem;
+}
+
+.btn-google {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #000;
+}
+
+.btn-google:hover {
+  background-color: #f7f7f7;
+}
+
+.signup-link {
+  font-size: 0.9rem;
+}
+
+.login-button {
+  color: white;
+  background-color: #ef5a60;
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  transition: background-color 0.3s ease-in; /* Correct transition syntax */
+}
+
+.login-button:hover {
+  background-color: #ef5a60c2; /* Slightly darker shade on hover */
+  color: white; /* Ensures text color remains white */
+}
+
+.pick-color-various {
+  position: absolute;
+}
+.logo-imagepng {
+}
+
+@media all and (min-width: 772px) and (max-width: 1244px) {
+  .login-image {
+    width: 50%;
+  }
+
+  .right-area {
+    width: 50%;
+  }
+}
+
+/* for text field */
+.custom-input {
+  border: 1px solid #ccc; /* Default border */
+  outline: none; /* Remove default focus outline */
+  padding: 10px;
+  border-radius: 8px;
+  transition: border-color 0.3s ease; /* Smooth transition for focus effect */
+}
+
+.custom-input:focus {
+  border-color: #ef5a60 !important; /* Change border color on focus */
+  box-shadow: 0 0 4px rgba(239, 90, 96, 0.5); /* Optional: Add a soft glow effect */
+}
+
+/* for check box */
+
+.custom-checkbox {
+  accent-color: #ef5a60; /* Modern browsers: Changes the checkmark and border color */
+  cursor: pointer; /* Makes the checkbox interactive */
+}
+
+.custom-checkbox:focus {
+  outline: none; /* Removes default outline */
+  box-shadow: 0 0 3px rgba(239, 90, 96, 0.5); /* Optional: Glow effect on focus */
+}
