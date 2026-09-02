@@ -307,7 +307,7 @@ const Dashboard = () => {
                 {/* cards */}
 
                 <div className="d-flex justify-content-xl-between align-items-start justify-content-center row card-container-animation">
-                  {planDetails.map((plan: any, index: number) => {
+                  {planDetails&&planDetails.length > 0 && planDetails.map((plan: any, index: number) => {
                     const matchingPlan = LISTING_PLANS.find(
                       (details) => details.plan === plan.name
                     );

@@ -86,6 +86,7 @@ const Footer = () => {
           domain: isLocalhost ? "" : import.meta.env.VITE_DOMAIN_PATH,
           path: "/",
         });
+        history("/login");
       });
   };
 
@@ -167,6 +168,10 @@ const Footer = () => {
                 <li
                   onClick={() => {
                     history("/");
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth", // or "auto"
+                    });
                   }}
                   style={{ cursor: "pointer" }}
                 >
@@ -174,7 +179,6 @@ const Footer = () => {
                 </li>
                 <li style={{ cursor: "pointer" }}><a
                   href="/about-us"
-                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-white"
                   style={{
@@ -214,7 +218,6 @@ const Footer = () => {
                 {/* <li>General Info</li> */}
                 <li style={{ cursor: "pointer" }}><a
                   href="/privacy-policy"
-                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-white"
                   style={{
@@ -223,7 +226,6 @@ const Footer = () => {
                 >Privacy Policy</a></li>
                 <li style={{ cursor: "pointer" }}> <a
                   href="/terms-and-conditions"
-                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-white"
                   style={{
@@ -245,7 +247,7 @@ const Footer = () => {
                   className="text-white"
                   style={{ cursor: "pointer", textDecoration: "none" }}
                 >{CONTACT_DETAILS.contactNo}</a></li>
-                <li>Contact Us</li>
+                {/* <li>Contact Us</li> */}
                 {/* <li>
                   <a
                     href="https://www.facebook.com/ServicedApartmentsLK/"
@@ -280,7 +282,13 @@ const Footer = () => {
           </div>
           <Row className="w-100 footer-down-section mt-5">
             <Col xs={24} sm={24} md={24} lg={8} xl={8} xxl={8} className="logo_blur-container d-flex justify-content-center justify-content-lg-start align-items-center">
-              <img width={140} src={lightLogo} alt="logo" className="my-2 my-lg-0" onClick={() => history("/")} /></Col>
+              <img width={140} src={lightLogo} alt="logo" className="my-2 my-lg-0" onClick={() => {
+                history("/");
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth", // or "auto"
+                });
+              }} /></Col>
             <Col xs={24} sm={24} md={24} lg={8} xl={8} xxl={8} className="d-flex justify-content-center text-center">
               <p className="all-right-reserved mt-2 mb-2">
                 {new Date().getFullYear()} © Serviced Apartments LK. All rights

@@ -59,7 +59,7 @@ const DiscountsTab: React.FC<DiscountsTabProps> = ({
   const startOfMonth = dayjs().startOf("month").startOf("day");
   const endOfMonth = dayjs().endOf("month").endOf("day");
 
-  const [priceRange, setPriceRange] = useState<number>();
+  const [priceRange, setPriceRange] = useState<string>();
   const [discountPriceRange, setDiscountPriceRange] = useState<string>();
   const [selectedRoomCategory, setSelectedRoomCategory] = useState<number>();
   const [roomCategoryList, setRoomCategoryList] = useState<DropdownObj[]>([]);
@@ -207,6 +207,24 @@ const DiscountsTab: React.FC<DiscountsTabProps> = ({
       });
   };
 
+  const formatPriceValue = (value: number) =>
+    value.toLocaleString("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+
+  const formatPriceRangeDisplay = (range?: string) => {
+    if (!range) return formatPriceValue(0);
+
+    return range
+      .split(" - ")
+      .map((part) => {
+        const numericValue = Number(part);
+        return formatPriceValue(Number.isFinite(numericValue) ? numericValue : 0);
+      })
+      .join(" - ");
+  };
+
   const processRoomCategoryPrices = (events: any[]) => {
     if (!events || events.length === 0) return;
 
@@ -218,9 +236,10 @@ const DiscountsTab: React.FC<DiscountsTabProps> = ({
         event.finalCalendarPrice && event.finalCalendarPrice !== 0
           ? event.finalCalendarPrice
           : event.standardPrice;
+      const numericPrice = Number(price);
 
-      if (price && price !== 0) {
-        prices.push(price);
+      if (Number.isFinite(numericPrice) && numericPrice !== 0) {
+        prices.push(numericPrice);
       }
     });
 
@@ -229,9 +248,10 @@ const DiscountsTab: React.FC<DiscountsTabProps> = ({
         event.discountedPrice &&
         event.discountedPrice !== 0 &&
         event.discountedPrice;
+      const numericDiscountPrice = Number(dPrices);
 
-      if (dPrices && dPrices !== 0) {
-        discountPrices.push(dPrices);
+      if (Number.isFinite(numericDiscountPrice) && numericDiscountPrice !== 0) {
+        discountPrices.push(numericDiscountPrice);
       }
     });
 
@@ -242,16 +262,15 @@ const DiscountsTab: React.FC<DiscountsTabProps> = ({
       return min === max ? `${min}` : `${min} - ${max}`;
     };
 
-    const priceRange = getRange(prices);
-    const discountPriceRange = getRange(discountPrices);
+    const nextPriceRange = getRange(prices);
+    const nextDiscountPriceRange = getRange(discountPrices);
 
-    // console.log(priceRange, "priceRange");
-    // console.log(discountPriceRange, "discountPriceRange");
+    setPriceRange(nextPriceRange ?? undefined);
+    setDiscountPriceRange(nextDiscountPriceRange ?? undefined);
 
-    setPriceRange(priceRange);
-    setDiscountPriceRange(discountPriceRange);
-
-    const propertyPrice = priceRange ? Number(priceRange.split(" - ")[0]) : 0;
+    const propertyPrice = nextPriceRange
+      ? Number(nextPriceRange.split(" - ")[0])
+      : 0;
     setPropertyPrice(propertyPrice);
 
     form.setFieldsValue({
@@ -586,13 +605,7 @@ const DiscountsTab: React.FC<DiscountsTabProps> = ({
                       <Row className="d-flex mt-3 d-flex align-items-center">
                         <Col xs={24} className="d-flex justify-content-center">
                           <h5 className="font-size-2 font-weight-normal text-center mt-2 mb-3">
-                            {CurrencyEnum.USD} {(Number(priceRange || 0)).toLocaleString(
-                              "en-US",
-                              {
-                                minimumFractionDigits: 2,
-                                maximumFractionDigits: 2,
-                              }
-                            )}
+                            {CurrencyEnum.USD} {formatPriceRangeDisplay(priceRange)}
                           </h5>
                           {/* </Col> */}
                           {/* <Col xs={4} className="d-flex justify-content-end"> */}

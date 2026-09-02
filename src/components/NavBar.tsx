@@ -279,7 +279,13 @@ const NavBar = ({ pageName }: Props) => {
             style={{ cursor: "pointer" }}
             width="auto"
             height={40}
-            onClick={() => navigate("/")}
+            onClick={() => {
+              navigate("/");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth", // or "auto"
+              });
+            }}
             src={logoImg}
             alt="logo"
           />
